@@ -21,7 +21,7 @@
 
             <div class="mb-4">
                 <x-label for="cv" :required="true">Upload CV</x-label>
-                <x-text-input type="file" name="cv" />
+                <x-text-input type="file" name="cv" class="text-red-700" />
             </div>
 
             <x-button class="w-full">Apply</x-button>

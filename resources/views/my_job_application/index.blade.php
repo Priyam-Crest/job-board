@@ -3,7 +3,7 @@
         
     @forelse ($applications as $application)
         <x-job-card :job="$application->job">
-            <div class="flex items-center justify-between text-xs text-slate-500">
+            <div class="flex items-center justify-between text-xs text-slate-500 dark:text-slate-300">
                 <div>
                     <div>
                         Applied {{ $application->created_at->diffForHumans() }}
@@ -30,12 +30,12 @@
             </div>
         </x-job-card>
     @empty
-        <div class="rounded-md border border-dashed border-slate-300 p-8">
+        <div class="rounded-md border border-dashed border-slate-300 p-8 dark:border-none">
             <div class="text-center font-medium">
                 No job application yet
             </div>
             <div class="text-center">
-                Go find some jobs <a class="text-indigo-500 hover:underline" href="{{ route('jobs.index') }}">here!</a>
+                Go find some jobs <a class="text-indigo-500 hover:underline dark:text-indigo-300 dark:font-medium" href="{{ route('jobs.index') }}">here!</a>
             </div>
         </div>
     @endforelse

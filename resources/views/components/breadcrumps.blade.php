@@ -1,5 +1,5 @@
 <nav {{ $attributes }}>
-    <ul class="flex space-x-3 text-slate-500">
+    <ul class="flex space-x-3 text-slate-500 dark:text-slate-200">
         <li><a href="/">Home</a></li>
 
         @foreach ($links as $lable => $link)

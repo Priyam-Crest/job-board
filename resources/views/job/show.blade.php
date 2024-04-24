@@ -1,7 +1,7 @@
 <x-layout>
     <x-breadcrumps :links="['Jobs' => route('jobs.index'), $job->title => '#']" class="mb-4" />
     <x-job-card :$job>
-        <p class="text-sm text-slate-500 mb-4">
+        <p class="text-sm text-slate-500 mb-4 dark:text-slate-300">
             {!! nl2br(e($job->description)) !!}
         </p>
 
@@ -10,7 +10,7 @@
                 Apply
             </x-link-button>
         @else
-            <div class="text-center text-sm font-medium text-slate-500">
+            <div class="text-center text-sm font-medium text-slate-500 dark:text-slate-400">
                 You already applied to this job
             </div>
         @endcan
@@ -21,11 +21,11 @@
             More {{ $job->employer->company_name }} Jobs
         </h2>
 
-        <div class="text-sm text-slate-500">
+        <div class="text-sm text-slate-500 dark:text-slate-300">
             @foreach ($job->employer->jobs as $otherJob)
                 <div class="mb-4 flex justify-between">
                     <div>
-                        <div class="text-slate-700">
+                        <div class="text-slate-700 dark:text-slate-100">
                             <a href="{{ route('jobs.show', $otherJob) }}">
                                 {{ $otherJob->title }}
                             </a>
