@@ -18,7 +18,7 @@
                 <a href="{{ route('jobs.index') }}">Home</a>
             </li>
             <li>
-                <button id="themeToggle" class="fixed bottom-2 right-2 px-3 py-2 rounded-full bg-gray-800 text-white text-xs">
+                <button id="themeToggle" class="fixed bottom-2 right-2 px-3 py-2 rounded-full bg-gray-200 text-gray-800 dark:bg-gray-800 dark:text-white text-xs">
                     Toggle Theme
                 </button>
                 
