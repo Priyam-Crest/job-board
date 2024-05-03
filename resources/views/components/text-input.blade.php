@@ -13,7 +13,11 @@
       placeholder="{{ $placeholder }}"
       name="{{ $name }}" value="{{ old($name, $value) }}" id="{{ $name }}"
       @class([
-          'w-full rounded-md border-0 py-1.5 px-2.5 text-sm ring-1 placeholder:text-slate-400 focus:ring-2 dark:bg-gray-800',
+          'w-full rounded-md border-0 text-sm ring-1 placeholder:text-slate-400 focus:ring-2 dark:bg-gray-800
+        file:bg-gray-200 file:border-0
+            file:me-2
+            file:py-2 file:px-4
+            dark:file:bg-gray-700 dark:file:text-neutral-200',
           'pr-8' => $formRef,
           'ring-slate-300' => !$errors->has($name),
           'ring-red-300' => $errors->has($name),
